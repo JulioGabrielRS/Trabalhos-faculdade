@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeStrike - Jogo de Digitação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TypeStrike: Defenda sua Nave!</h1>
+    <div id="game">
+        <canvas id="gameCanvas"></canvas>
+        <div id="typedWord"></div>
+    
+    </div>
+
+    <div id="collisionAlert" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: red; color: white; padding: 20px; font-size: 20px; border-radius: 10px;">
+        Meteoro colidiu com a nave!<br>
+        <button id="restartButton" style="margin-top: 10px;">Voltar ao Jogo</button>
+    </div>
+    
+    
+    
+    <script src="game.js"></script>
+</body>
+</html>

@@ -11,7 +11,19 @@ const meteorImg = new Image();
 meteorImg.src = 'imagens/meteor.png';
 
 // Variáveis para a nave e o meteoro
-let words = ['comet', 'meteor', 'rocket', 'planet', 'galaxy', 'asteroid'];
+let words = [
+    'dados', 'informacao', 'sistema', 'tecnologia', 'computador',
+    'software', 'hardware', 'rede', 'banco', 'programacao',
+    'algoritmo', 'interface', 'usuario', 'seguranca', 'analise',
+    'armazenamento', 'backup', 'nuvem', 'criptografia', 'sinal',
+    'protocolos', 'transmissao', 'processamento', 'arquitetura',
+    'dadosabertos', 'inteligenciaartificial', 'bigdata', 'machinelearning',
+    'datamining', 'visualizacao', 'esquema', 'metadados', 'fluxo',
+    'relacional', 'dispositivo', 'telematica', 'infraestrutura', 
+    'teoria', 'codigo', 'frontend', 'backend', 'desenvolvimento',
+    'aplicativo', 'web', 'mobile', 'sistemas'
+];
+
 let currentWord = '';
 let typedWord = '';
 let correctCount = 0; // Contador de acertos
@@ -34,7 +46,7 @@ function drawBackground() {
 function drawWord() {
     const remainingWord = currentWord.substring(typedWord.length); // Exibir apenas a parte não digitada
     ctx.fillStyle = '#ffffff';
-    ctx.font = '30px Courier';
+    ctx.font = '25px Courier';
     ctx.fillText(remainingWord, meteorX + 10, meteorY + 80); // Palavra parcial
 }
 
@@ -68,16 +80,20 @@ function updateMeteorPosition() {
     }
 }
 
-// Função para exibir o alerta de colisão
+// Função para exibir o alerta de colisão e aplicar desfoque ao fundo
 function showCollisionAlert() {
     const alertDiv = document.getElementById('collisionAlert');
-    alertDiv.style.display = 'block'; // Exibir o alerta
+    const finalScore = document.getElementById('finalScore');
+    finalScore.innerText = correctCount; // Atualizar o contador de acertos no alerta
+    alertDiv.style.display = 'block'; // Exibir o alerta de colisão
+    document.getElementById('overlay').style.display = 'block'; // Exibir o overlay
 }
 
-// Função para esconder o alerta de colisão
+// Função para esconder o alerta de colisão e remover desfoque
 function hideCollisionAlert() {
     const alertDiv = document.getElementById('collisionAlert');
-    alertDiv.style.display = 'none'; // Esconder o alerta
+    alertDiv.style.display = 'none'; // Esconder o alerta de colisão
+    document.getElementById('overlay').style.display = 'none'; // Esconder o overlay
 }
 
 // Função para resetar o jogo e gerar novos meteoros
@@ -86,14 +102,18 @@ function resetGame() {
     currentWord = words[Math.floor(Math.random() * words.length)];
     meteorX = Math.random() * (canvas.width - 50); // Nova posição do meteoro no topo
     meteorY = 0; // Voltar ao topo
-    correctCount = 0; // Reiniciar o contador de acertos
-
+    updateScoreCounter(); // Atualiza o contador de acertos
     gameRunning = true; // Iniciar o jogo
     hideCollisionAlert(); // Esconder o alerta
 }
 
+function updateScoreCounter() {
+    document.getElementById('score').innerText = correctCount;
+}
+
 // Adicionar o evento de clique ao botão
 document.getElementById('restartButton').addEventListener('click', function () {
+    correctCount = 0; // Reiniciar o contador de acertos
     resetGame(); // Reseta o jogo
     meteorSpeed = 1; // Reiniciar a velocidade do meteoro
     gameLoop(); // Reinicia o loop do jogo
@@ -109,7 +129,7 @@ function checkInput(event) {
     if (currentWord.startsWith(typedWord)) {
         if (currentWord === typedWord) {
             correctCount++; // Incrementar o contador de acertos
-            meteorSpeed += 0.3; // Aumentar a velocidade do meteoro
+            meteorSpeed += 0.1; // Aumentar a velocidade do meteoro
             resetGame(); // Reseta quando a palavra for completamente digitada
         }
     } else if (event.key === 'Backspace') {
@@ -137,3 +157,16 @@ resetGame();
 
 window.addEventListener('keydown', checkInput);
 gameLoop();
+
+// Atualizar o tamanho do canvas para se ajustar à tela
+function resizeCanvas() {
+    canvas.width = window.innerWidth * 0.8; // Ajusta a largura do canvas
+    canvas.height = 500; // Mantém a altura do canvas
+    shipX = canvas.width / 2 - 25; // Recalcula a posição inicial da nave
+}
+
+// Adicionar evento para redimensionar o canvas quando a janela é redimensionada
+window.addEventListener('resize', resizeCanvas);
+
+// Chamar a função uma vez para definir o tamanho inicial
+resizeCanvas();

@@ -83,3 +83,13 @@ h1 {
   filter: blur(5px); /* Ajuste o valor para mais ou menos desfoque */
   pointer-events: none; /* Impede interações enquanto o alerta está ativo */
 }
+
+@media (max-width: 600px) {
+  .container {
+      padding: 1em;
+  }
+
+  .button {
+      font-size: 6vw; /* Aumenta o tamanho da fonte em telas menores */
+  }
+}

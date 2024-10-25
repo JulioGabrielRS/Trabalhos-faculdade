@@ -158,12 +158,6 @@ resetGame();
 window.addEventListener('keydown', checkInput);
 gameLoop();
 
-// Atualizar o tamanho do canvas para se ajustar à tela
-function resizeCanvas() {
-    canvas.width = window.innerWidth * 0.8; // Ajusta a largura do canvas
-    canvas.height = 500; // Mantém a altura do canvas
-    shipX = canvas.width / 2 - 25; // Recalcula a posição inicial da nave
-}
 
 // Adicionar evento para redimensionar o canvas quando a janela é redimensionada
 window.addEventListener('resize', resizeCanvas);

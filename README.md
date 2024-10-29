@@ -1,23 +1,35 @@
-# TypeStrike: Defensores Espaciais 🚀
+# Projetos da Faculdade 🎓
 
-**TypeStrike** é um jogo interativo de digitação que combina diversão e aprendizado. O objetivo é defender uma nave espacial de meteoros digitando corretamente as palavras que aparecem na tela. Ideal para quem quer praticar a habilidade de digitação enquanto se diverte.
+Este repositório contém projetos e atividades desenvolvidos ao longo do curso, organizados por semestre e disciplina. Cada projeto possui seu próprio diretório com informações específicas, instruções de uso e, quando aplicável, documentação adicional.
 
-## 🚀 Visão Geral
+## 📂 Estrutura do Repositório
 
-Neste jogo, você controla uma nave espacial em um ambiente de ficção científica e enfrenta ondas de meteoros digitando palavras rapidamente e com precisão. Cada acerto elimina um meteoro, enquanto erros deixam a nave vulnerável. Com níveis progressivos, o jogo testa e aprimora sua velocidade e precisão na digitação.
+A estrutura do repositório está organizada por semestre e disciplina para facilitar o acesso e consulta. Exemplos:
 
-### 📱 Responsividade
 
-O TypeStrike é desenvolvido para ser responsivo, permitindo que os jogadores aproveitem a experiência tanto em desktops quanto em dispositivos móveis.
+Cada pasta contém os arquivos e documentações necessárias para entender e executar o projeto.
+
+## 🚀 Projetos Destacados
+
+### TypeStrike: Defensores Espaciais (Jogo) 🚀
+- **Descrição:** Um jogo de digitação onde o objetivo é proteger uma nave espacial de meteoros digitando as palavras corretamente. Ideal para aprimorar a velocidade e precisão na digitação de uma forma divertida.
+- **Tecnologias:** HTML5, CSS3, JavaScript
+- **Como Jogar:** Abra o arquivo `index.html` na pasta `TypeStrike/jogo` para iniciar o jogo. Mais instruções sobre o jogo estão no README da pasta `jogo`.
+
+### TypeStrike: Site de Divulgação 🌐
+- **Descrição:** Site de apresentação e divulgação do TypeStrike. Ele explica o objetivo do jogo e como ele pode ser usado para praticar digitação de uma forma interativa.
+- **Tecnologias:** HTML, CSS, JavaScript
+- **Como Acessar:** Para visualizar o site, abra o arquivo `index.html` na pasta `TypeStrike/site`. Ele é responsivo e pode ser acessado tanto em desktops quanto em dispositivos móveis.
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
+- **Linguagens de Programação:** HTML, CSS, JavaScript, Python, Java, C++
+- **Ferramentas:** Git, Visual Studio Code, Eclipse, etc.
 
-## 📦 Instalação
+## 📌 Notas
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seuusuario/typestrike.git
+O repositório é destinado a fins educacionais, incluindo projetos em desenvolvimento e finalizados. Projetos podem conter versões preliminares.
+
+---
+
+**Mantenha o aprendizado constante e boa sorte!**

@@ -4,10 +4,7 @@ Este repositório contém projetos e atividades desenvolvidos ao longo do curso,
 
 ## 📂 Estrutura do Repositório
 
-A estrutura do repositório está organizada por semestre e disciplina para facilitar o acesso e consulta. Exemplos:
-
-
-Cada pasta contém os arquivos e documentações necessárias para entender e executar o projeto.
+A estrutura do repositório está organizada por período.
 
 ## 🚀 Projetos Destacados
 

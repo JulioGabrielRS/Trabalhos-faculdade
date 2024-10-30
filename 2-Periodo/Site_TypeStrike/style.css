@@ -20,6 +20,9 @@ header {
   z-index: 1000;
   flex-wrap: wrap;
 }
+a{
+  color: #00d0ff;
+}
 
 header img {
   width: 150px;

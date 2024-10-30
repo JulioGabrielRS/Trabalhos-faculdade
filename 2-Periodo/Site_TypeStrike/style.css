@@ -9,7 +9,7 @@ body {
 }
 
 header {
-background-image: url('imagens/Fundo.png');
+  background-image: url('imagens/Fundo.png');
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +54,7 @@ nav a:hover {
 }
 
 main {
-background-image: url('imagens/Fundo.png');
+  background-image: url('imagens/Fundo.png');
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
@@ -104,70 +104,63 @@ footer {
   width: 100%;
   margin-top: 40px;
 }
-p{
-  color: #cccccc;  
+
+p {
+  color: #cccccc;
   padding: 10px;
   text-align: center;
   position: relative;
   font-size: 17px;
-  line-height: 1.5; /* Altere o valor para ajustar o espaçamento */
+  line-height: 1.5;
+}
+/* Ícone do Menu Hamburguer */
+.menu-icon {
+  display: none; /* Escondido por padrão em telas grandes */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.menu-icon div {
+  width: 30px;
+  height: 3px;
+  background-color: #00d0ff;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-/* Responsividade */
+/* Menu Responsivo */
+#nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
 @media (max-width: 768px) {
-  header {
-      flex-direction: column;
-      align-items: center;
+  .menu-icon {
+    display: flex; /* Mostrar o ícone apenas em telas menores */
+  }
+  
+  #nav-menu {
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(29, 29, 68, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
   }
 
-  nav {
-      justify-content: center;
-      flex-wrap: wrap;
+  #nav-menu a {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #00d0ff;
+    text-decoration: none;
   }
 
-  .section-container {
-      width: 95%;
-      padding: 20px;
+  #nav-menu.show {
+    display: flex; /* Exibir menu quando a classe "show" for ativada */
   }
-
-  .screenshots img {
-      width: 100%;
-      max-width: 200px;
-  }
-
-  nav a {
-      font-size: 0.8em;
-      padding: 6px 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  header img {
-      width: 120px;
-  }
-
-  nav a {
-      font-size: 0.7em;
-      padding: 5px 6px;
-  }
-
-  .section-container h2 {
-      font-size: 1.2em;
-  }
-
-  .screenshots img {
-      width: 100%;
-      max-width: 150px;
-  }
-}
-a {
-color:#00d0ff; /* Define a cor padrão do link */
-}
-a:hover {
-color: rgb(25, 0, 255); /* Define a cor ao passar o mouse */
 }

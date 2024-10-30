@@ -1,6 +1,6 @@
 # Projetos da Faculdade 🎓
 
-Este repositório contém projetos e atividades desenvolvidos ao longo do curso, organizados por semestre e disciplina. Cada projeto possui seu próprio diretório com informações específicas, instruções de uso e, quando aplicável, documentação adicional.
+Este repositório contém projetos e atividades desenvolvidos ao longo do curso, organizados por período.
 
 ## 📂 Estrutura do Repositório
 

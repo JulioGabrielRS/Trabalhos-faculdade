@@ -17,8 +17,8 @@ let words = [
     'algoritmo', 'interface', 'usuario', 'seguranca', 'analise',
     'armazenamento', 'backup', 'nuvem', 'criptografia', 'sinal',
     'protocolos', 'transmissao', 'processamento', 'arquitetura',
-    'dadosabertos', 'artificial', 'bigdata', 'machinelearning',
-    'datamining', 'visualizacao', 'esquema', 'metadados', 'fluxo',
+    'dados', 'abertos','artificial', 'bigdata', 'testes',
+    'data', 'visualizacao', 'esquema', 'metadados', 'fluxo',
     'relacional', 'dispositivo', 'telematica', 'infraestrutura', 
     'teoria', 'codigo', 'frontend', 'backend', 'desenvolvimento',
     'aplicativo', 'web', 'mobile', 'sistemas'

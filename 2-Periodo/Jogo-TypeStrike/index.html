@@ -9,33 +9,48 @@
 <body>
     <h1>TypeStrike: Defenda sua Nave!</h1>
     <h3>Digite as palavras para destruir os meteoros</h3>
+    
+    <!-- Tela de início para escolha de dificuldade -->
+    <div id="startScreen">
+        <h2>Escolha a Dificuldade</h2>
+        <button onclick="startGame('easy')">Fácil</button>
+        <button onclick="startGame('medium')">Médio</button>
+        <button onclick="startGame('hard')">Difícil</button>
+    </div>
+
+    <!-- Área principal do jogo -->
     <div id="game">
         <canvas id="gameCanvas"></canvas>
         <div id="typedWord"></div>
-    
     </div>
-    
+
+    <!-- Contador de acertos -->
     <div id="scoreCounter" style="position: fixed; top: 120px; left: 175px; font-size: 24px; color: #bcbdbf;">
         Acertos: <span id="score">0</span>
     </div>
 
+    <!-- Alerta de colisão -->
+    <div id="collisionAlert" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50vw; height: 50vh; background: linear-gradient(135deg, #000000, #000000, #0051ff); color: rgb(255, 255, 255); padding: 40px; font-size: 24px; border-radius: 20px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7); text-align: center; animation: shake 0.3s ease-in-out; border: 5px solid #0051ff;">
+    <h2>🚨 Alerta de Colisão! 🚨</h2>
+    <p>⚠️ Meteoro atingiu a nave! ⚠️<br> Recupere-se e retome a missão!</p>
+    <p style="color: #0051ff; background-color: #ffffff;">Acertos: <span id="finalScore">0</span></p>
+    <h4>Escolha uma dificuldade para continuar:</h4>
     
+    <!-- Botões de dificuldade -->
+     <div>
+        <button id="restartButton" onclick="restartGame('easy')">Fácil</button>
+        <button id="restartButton" onclick="restartGame('medium')">Médio</button>
+        <button id="restartButton" onclick="restartGame('hard')">Difícil</button>
+    </div>
+  
+</div>
+
+    
+
+    <!-- Overlay de fundo para efeito de desfoque na colisão -->
     <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(60%); z-index: 999;"></div>
 
-
-    <div id="collisionAlert" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50vw; height: 50vh; background: linear-gradient(135deg, #000000, #000000, #0051ff); color: rgb(255, 255, 255); padding: 40px; font-size: 24px; border-radius: 20px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7); text-align: center; animation: shake 0.3s ease-in-out; border: 5px solid #0051ff;">
-        <h2>🚨 Alerta de Colisão! 🚨</h2>
-        <p>⚠️ Meteoro atingiu a nave! ⚠️<br> Recupere-se e retome a missão!</p>
-        <p style="color: #0051ff; background-color: #ffffff;">Acertos: <span id="finalScore">0</span></p> 
-        <h4>Clique para jogar novamente!</h4>
-        <button id="restartButton" style="margin-top: 5px; padding: 10px 20px; font-size: 18px; background-color: #ffffff; color: #000000; border: none; border-radius: 5px; cursor: pointer; border: 5px solid #0051ff;">
-            Reiniciar Jogo
-        </button>
-    </div>
-
- 
-      
-    
+    <!-- Script do jogo -->
     <script src="game.js"></script>
 </body>
 </html>

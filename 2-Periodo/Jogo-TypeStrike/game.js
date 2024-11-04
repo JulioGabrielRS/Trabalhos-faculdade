@@ -178,12 +178,7 @@ function gameLoop() {
         requestAnimationFrame(gameLoop);
     }
 }
-
-<<<<<<< Updated upstream
-// Inicializa o jogo
-window.addEventListener('keydown', checkInput);
-window.addEventListener('resize', resizeCanvas);
-=======
+ HEAD
 // Iniciar o jogo
 resetGame();
 window.addEventListener('keydown', checkInput);
@@ -193,7 +188,11 @@ gameLoop();
 window.addEventListener('resize', resizeCanvas);
 
 // Chamar a função uma vez para definir o tamanho inicial \\
->>>>>>> Stashed changes
+
+// Inicializa o jogo
+window.addEventListener('keydown', checkInput);
+window.addEventListener('resize', resizeCanvas);
+modificacoes
 resizeCanvas();
 
 // Função para reiniciar o jogo com a dificuldade escolhida

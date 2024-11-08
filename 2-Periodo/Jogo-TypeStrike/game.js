@@ -178,21 +178,10 @@ function gameLoop() {
         requestAnimationFrame(gameLoop);
     }
 }
- HEAD
-// Iniciar o jogo
-resetGame();
-window.addEventListener('keydown', checkInput);
-gameLoop();
-
-// Adicionar evento para redimensionar o canvas quando a janela é redimensionada
-window.addEventListener('resize', resizeCanvas);
-
-// Chamar a função uma vez para definir o tamanho inicial \\
 
 // Inicializa o jogo
 window.addEventListener('keydown', checkInput);
 window.addEventListener('resize', resizeCanvas);
-modificacoes
 resizeCanvas();
 
 // Função para reiniciar o jogo com a dificuldade escolhida

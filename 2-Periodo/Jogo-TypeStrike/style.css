@@ -86,19 +86,12 @@ h1 {
 }
 
 #startScreen button {
-<<<<<<< HEAD
   background-color: #00d0ff;
   color: #ffffff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin: 10px;
   padding: 10px 20px;
   font-size: 18px;
-
-=======
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 18px;
->>>>>>> modificacoes
 }
 #restartButton {
   margin-top: 10px;
@@ -109,9 +102,6 @@ h1 {
   border: none; 
   border-radius: 5px; 
   cursor: pointer; 
-<<<<<<< HEAD
-  border: 5px solid #00d2f9;
-=======
-  border: 5px solid #0051ff;
->>>>>>> modificacoes
+ border: 5px solid #0051ff;
+
 }

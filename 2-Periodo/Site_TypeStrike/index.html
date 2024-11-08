@@ -12,13 +12,24 @@
 <body>
 
     <header>
-        <img src="../imagens/logo.png" alt="Logo da Empresa" style="width: 20%;">
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#prints">Prints</a>
-            <a href="#objetivo">Objetivo</a>
-            <a href="#contato">Contato</a>
-        </nav>
+    
+            <img src="../Site_TypeStrike/imagens/logo.png" alt="Logo" style="width: 250px;">
+            
+            <!-- Ícone do Menu Hamburguer -->
+            <div class="menu-icon" onclick="toggleMenu()">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          
+            <!-- Menu -->
+            <nav id="nav-menu">
+
+              <a href="#sobre" onclick="scrollToSection(event, 'sobre')">Sobre</a>
+              <a href="#prints" onclick="scrollToSection(event, 'prints')">Prints</a>
+              <a href="#objetivo" onclick="scrollToSection(event, 'objetivo')">Objetivo</a>
+              <a href="#informacoes" onclick="scrollToSection(event, 'informacoes')">Informações</a>
+            </nav>
     </header>
 
     <main>

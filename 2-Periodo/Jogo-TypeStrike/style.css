@@ -93,7 +93,7 @@ h1 {
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 5px; 
-  width: 100px;
+  width:20vh;
   cursor: pointer; 
 
 }
@@ -107,5 +107,10 @@ h1 {
   border-radius: 5px; 
   cursor: pointer; 
  border: 5px solid #0051ff;
-
+}
+#scoreCounter{
+  top: 5px;
+  position: relative; 
+  font-size: 25px; 
+  color: #bcbdbf;
 }

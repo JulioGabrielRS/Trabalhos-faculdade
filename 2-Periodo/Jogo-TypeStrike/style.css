@@ -92,13 +92,17 @@ h1 {
   margin: 10px;
   padding: 10px 20px;
   font-size: 18px;
+  border-radius: 5px; 
+  width: 100px;
+  cursor: pointer; 
+
 }
 #restartButton {
   margin-top: 10px;
   padding: 10px 20px; 
   font-size: 18px; 
-  background-color: #ffffff; 
-  color: #000000; 
+  background-color: #0051ff; 
+  color: white; 
   border: none; 
   border-radius: 5px; 
   cursor: pointer; 

@@ -13,7 +13,7 @@ const wordLevels = {
     easy: [
         'dados', 'rede', 'banco', 'software', 'hardware', 'monitor', 'mouse', 'teclado', 
         'internet', 'senha', 'email', 'nuvem', 'senha', 'router', 'cabo', 'usb', 'wifi', 
-        'backup', 'digital', 'site', 'texto', 'código', 'editor', 'menu'
+        'backup', 'digital', 'site', 'texto', 'codigo', 'editor', 'menu'
     ],
     medium: [
         'sistema', 'programacao', 'analise', 'criptografia', 'algoritmo', 'compilador', 

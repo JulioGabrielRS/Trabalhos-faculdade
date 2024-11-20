@@ -13,8 +13,7 @@ h1 {
   margin-top: 20px;
 }
 
-#gameCanvas {
-  
+#gameCanvas {  
   background-image: url('imagens/Fundo.png');
   border: 2px solid #00d0ff;
   width: 80%;

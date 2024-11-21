@@ -100,13 +100,6 @@ function updateScoreCounter() {
     document.getElementById('score').innerText = correctCount;
 }
 
-document.getElementById('restartButton').addEventListener('click', function () {
-    correctCount = 0;
-    resetGame();
-    meteorSpeed = levelSettings[currentLevel].initialSpeed;
-    gameLoop();
-});
-
 // Função para verificar a entrada do usuário
 function checkInput(event) {
     if (!gameRunning) return;

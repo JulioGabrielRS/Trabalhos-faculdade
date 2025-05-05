@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VetorRH - Seleção Inteligente</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      max-height: 120px;
+    }
+
+    header .header-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    .menu-mobile {
+     
+      color: #eee;
+      display: none;
+      flex-direction: column;
+      background-color: #004aad;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+    }
+
+    .menu-mobile a {
+      text-decoration: none;
+      color: #eee;
+      padding: 10px 20px;
+      border-top: 1px solid #003080;
+    }
+
+    main {
+      padding-top: 240px; 
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #004aad;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #003080;
+    }
+
+    footer {
+      text-align: center;
+      background: #eee;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .menu-mobile {
+        display: flex;
+      }
+
+      main {
+        padding-top: 300px; /* ainda mais espaço para o header expandido no mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Logo VetorRH" />
+    <div class="header-text">
+      <h1>VetorRH</h1>
+      <p>Automatizando sua seleção de talentos</p>
+    </div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#funciona">Como Funciona</a>
+      <a href="#vantagens">Vantagens</a>
+      <a href="#projeto">Projeto</a>
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#simulacao">Simule</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu-mobile" id="mobileMenu">
+      <a href="#sobre" onclick="closeMenu()">Sobre</a>
+      <a href="#funciona" onclick="closeMenu()">Como Funciona</a>
+      <a href="#vantagens" onclick="closeMenu()">Vantagens</a>
+      <a href="#projeto" onclick="closeMenu()">Projeto</a>
+      <a href="#tecnologias" onclick="closeMenu()">Tecnologias</a>
+      <a href="#simulacao" onclick="closeMenu()">Simule</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre o Projeto</h2>
+      <p>A VetorRH surgiu com o objetivo de otimizar o processo de recrutamento e seleção, conectando currículos às exigências específicas de cada vaga com o auxílio da tecnologia.</p>
+    </section>
+
+    <section id="funciona">
+      <h2>Como Funciona</h2>
+      <ul>
+        <li>Recebimento de currículos</li>
+        <li>Análise automatizada dos documentos</li>
+        <li>Comparação com os requisitos da vaga</li>
+        <li>Geração de ranking dos candidatos compatíveis</li>
+      </ul>
+    </section>
+
+    <section id="vantagens">
+      <h2>Vantagens</h2>
+      <ul>
+        <li>Rapidez no processo seletivo</li>
+        <li>Redução de erros humanos</li>
+        <li>Análises padronizadas</li>
+        <li>Assertividade nas contratações</li>
+      </ul>
+    </section>
+
+    <section id="projeto">
+      <h2>O que será feito</h2>
+      <p>Veja abaixo o processo de como nosso sistema vai otimizar seu processo de recrutamento e seleção.</p>
+      <img src="processo.jpg" alt="Imagem explicativa do processo" style="max-width: 100%; height: auto; margin-top: 20px;" />
+    </section>
+    
+
+    <section id="tecnologias">
+      <h2>Tecnologias Utilizadas</h2>
+      <p>HTML, CSS, JavaScript, C# (ASP.NET Web API para análise de currículos)</p>
+    </section>
+
+    <section id="simulacao">
+      <h2>Simule uma Seleção</h2>
+      <button class="btn" onclick="simularSelecao()">Testar Análise</button>
+      <p id="resultado" style="margin-top: 20px; font-weight: bold;"></p>
+    </section>
+  </main>
+
+  <footer>
+    Projeto Integrador - VetorRH &copy; 2025
+  </footer>
+
+  <script>
+    // Ajusta o scroll para considerar o cabeçalho fixo
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+  
+        // Calcula a posição correta levando em consideração o cabeçalho fixo
+        window.scrollTo({
+          top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+          behavior: 'smooth'
+        });
+      });
+    });
+  
+    function simularSelecao() {
+      const resultadoElement = document.getElementById("resultado");
+      const btnSimular = document.querySelector(".btn");
+  
+      // Exibe o loading
+      btnSimular.textContent = "Carregando...";
+      btnSimular.disabled = true;
+  
+      // Realiza a requisição
+      fetch("https://seuservidor/api/curriculos/analisar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify("Currículo exemplo do front")
+      })
+        .then(res => res.json())
+        .then(data => {
+          // Atualiza o resultado
+          resultadoElement.textContent = data.resultado;
+        })
+        .catch(() => {
+          // Erro ao comunicar
+          resultadoElement.textContent = "Erro ao comunicar com o servidor.";
+        })
+        .finally(() => {
+          // Restaura o botão após o carregamento
+          btnSimular.textContent = "Testar Análise";
+          btnSimular.disabled = false;
+        });
+    }
+  
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      const isVisible = menu.style.display === "flex";
+      menu.style.display = isVisible ? "none" : "flex";
+    }
+  
+    function closeMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.style.display = "none";
+    }
+  </script>
+  
+  
+</body>
+</html>

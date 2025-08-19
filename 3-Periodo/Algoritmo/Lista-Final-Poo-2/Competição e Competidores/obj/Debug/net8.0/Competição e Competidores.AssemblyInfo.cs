@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Competição e Competidores")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3331918816720086849d5e352004a6617534a632")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+209c918573b0e56f55348c7fea60624f4f39792c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Competição e Competidores")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Competição e Competidores")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

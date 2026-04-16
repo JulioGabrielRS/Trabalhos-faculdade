@@ -1,32 +1,52 @@
-# Projetos da Faculdade 🎓
+# Organizacao de Rotina
 
-Este repositório contém projetos e atividades desenvolvidos ao longo do curso, organizados por período.
+Projeto do semestre com:
 
-## 📂 Estrutura do Repositório
+- Frontend em React Native + TypeScript
+- Backend fake com `json-server`
+- Tela de login
+- Tela home inicial
+- Funcao completa de tarefas integrada ao back
 
-A estrutura do repositório está organizada por período.
+## Como executar
 
-## 🚀 Projetos Destacados
+1. Instale as dependencias:
 
-### TypeStrike: Defensores Espaciais (Jogo) 🚀
-- **Descrição:** Um jogo de digitação onde o objetivo é proteger uma nave espacial de meteoros digitando as palavras corretamente. Ideal para aprimorar a velocidade e precisão na digitação de uma forma divertida.
-- **Tecnologias:** HTML5, CSS3, JavaScript
-- **Como Jogar:** Abra o arquivo `index.html` na pasta `TypeStrike/jogo` para iniciar o jogo. Mais instruções sobre o jogo estão no README da pasta `jogo`.
+```bash
+npm install
+```
 
-### TypeStrike: Site de Divulgação 🌐
-- **Descrição:** Site de apresentação e divulgação do TypeStrike. Ele explica o objetivo do jogo e como ele pode ser usado para praticar digitação de uma forma interativa.
-- **Tecnologias:** HTML, CSS, JavaScript
-- **Como Acessar:** Para visualizar o site, abra o arquivo `index.html` na pasta `TypeStrike/site`. Ele é responsivo e pode ser acessado tanto em desktops quanto em dispositivos móveis.
+2. Inicie o backend fake:
 
-## 🛠️ Tecnologias Utilizadas
+```bash
+npm run server
+```
 
-- **Linguagens de Programação:** HTML, CSS, JavaScript, Python, Java, C++
-- **Ferramentas:** Git, Visual Studio Code, Eclipse, etc.
+3. Em outro terminal, inicie o app:
 
-## 📌 Notas
+```bash
+npm start
+```
 
-O repositório é destinado a fins educacionais, incluindo projetos em desenvolvimento e finalizados. Projetos podem conter versões preliminares.
+## Login de teste
 
----
+- Email: `julio@email.com`
+- Senha: `123456`
 
-**Mantenha o aprendizado constante e boa sorte!**
+## Endpoints usados
+
+- `GET /usuarios?email=...&senha=...`
+- `GET /tarefas?usuarioId=1`
+- `POST /tarefas`
+- `PATCH /tarefas/:id`
+- `DELETE /tarefas/:id`
+
+## Observacao importante
+
+Em [src/api/api.ts](C:\Users\juliogrs\Downloads\H1\src\api\api.ts), a URL esta configurada para emulador Android:
+
+```ts
+const BASE_URL = "http://10.0.2.2:3000";
+```
+
+Se for usar celular fisico, troque para o IP da sua maquina na rede local.

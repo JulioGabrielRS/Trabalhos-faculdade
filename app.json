@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Organizacao de Rotina",
+    "slug": "organizacao-rotina",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#f3efe8"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#f3efe8"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
